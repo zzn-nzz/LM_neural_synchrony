@@ -1,0 +1,8 @@
+{
+    "Mistral-7B-Instruct-v0.2": "Your_local_path",
+    "Llama-3-8B-Instruct": "Your_local_path",
+    "Llama-2-7B-Chat": "Your_local_path",
+    "Mistral-7B-Instruct-v0.3": "Your_local_path",
+    "Llama-3.2-3B-Instruct": "Your_local_path",
+    "Mistral-7B-Instruct-v0.1": "Your_local_path"
+}
