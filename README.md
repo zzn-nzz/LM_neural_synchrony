@@ -1,24 +1,24 @@
 # 🧠 Neural Synchrony Between Socially Interacting Language Models
 
-> This repository contains the code accompanying the paper **"Neural Synchrony Between Socially Interacting Language Models"**.
+> This repository contains the code accompanying the paper **"Neural Synchrony Between Socially Interacting Language Models"**. 
+It shows that neural synchrony, as measured by *predictive performances between the neural representations* of interacting language models, is strongly correlated with their collective social performances.
 
 <p align="center">
-  <img src="visuals/correlation_family.png" alt="Neural Synchrony Correlation" width="800"/>
+  <img src="visuals/teaser.png" alt="Neural Synchrony Correlation" width="1000"/>
 </p>
-
-## Overview
-
-It shows that neural synchrony, as measured by *predictive abilities between the neural representations* of interacting language models, is strongly correlated with their collective social performances.
 
 ---
 
-## Table of Contents
+<details>
+<summary><strong>📑 Table of Contents</strong></summary>
 
-- [Requirements](#requirements)
-- [Extracting Neural Representations](#extracting-neural-representations-while-running-social-simulation)
-- [Training Affine Transformations](#training-and-evaluating-affine-transformations-between-neural-representations)
-- [Social Performance Evaluation](#neural-synchrony-as-indicator-for-social-performances)
-- [Social and Temporal Dynamics](#neural-synchrony-captures-social-and-temporal-dynamics-of-interaction)
+1. [📦 Requirements](#requirements)
+2. [🧠 Extracting Neural Representations](#extracting-neural-representations-while-running-social-simulation)
+3. [🔁 Training Affine Transformations](#training-and-evaluating-affine-transformations-between-neural-representations)
+4. [📊 Social Performance Evaluation](#neural-synchrony-as-indicator-for-social-performances)
+5. [⏱️ Social and Temporal Dynamics](#neural-synchrony-captures-social-and-temporal-dynamics-of-interaction)
+
+</details>
 
 ---
 
@@ -44,8 +44,7 @@ It shows that neural synchrony, as measured by *predictive abilities between the
 sh bash/simulate_and_save_states.sh
 ```
 
-**Output:**
-- The collected representations and social simulation records will be saved in `sotopia_results/`
+- The collected representations and social simulation records will be saved in `sotopia_results/`.
 
 ---
 
@@ -55,15 +54,13 @@ sh bash/simulate_and_save_states.sh
 sh bash/train_affine_transformation.sh
 ```
 
-**Output:**
-- Results will be stored in `./affine_transformation`
+- Results will be stored in `./affine_transformation`.
 
 ---
 
 ## Neural Synchrony As Indicator For Social Performances
 
-### Prerequisites
-
+> [!IMPORTANT]
 > Before running the evaluation script, make sure to launch vLLM serving gpt-oss-120b locally.  
 > Follow the setup instructions in [this guide](https://cookbook.openai.com/articles/gpt-oss/run-vllm). You may customize the port in the script if needed.
 
@@ -73,9 +70,7 @@ To evaluate social performances with gpt-oss-120b:
 python evaluate_with_oss.py
 ```
 
-To analyze results and generate figures:
-
-Run `data_analysis.py` in `playground/` for result analysis and figures 📊
+To analyze results and generate figures, run `playground/data_analysis.py` for result analysis and figures 📊.
 
 ---
 
@@ -86,3 +81,6 @@ Run `data_analysis.py` in `playground/` for result analysis and figures 📊
 ```bash
 sh bash/without_genuine_interaction.sh
 ```
+
+Then see `playground/data_analysis.py` for result analysis and figures 📊.
+
